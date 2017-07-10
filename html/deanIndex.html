@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/alertIframe.css">
     <link rel="stylesheet" href="../css/boot-css.css">
     <link rel="stylesheet" href="../css/mouseTip.css">
-    <title>学生主页</title>
+    <title>主页</title>
     <style>
         #main{
             position: absolute;
@@ -41,9 +41,18 @@
 <body >
 <div id="menu">
     <ul>
-        <li><a role="presentation" data-url="./student/changeMajorApply.html" href="#1"  class="data-url">学生转专业申请</a></li>
-        <li><a role="presentation" data-url="./student/applyProgress.html" href="#1"  class="data-url">学生申请记录列表</a></li>
-     </ul>
+
+        <li><a role="presentation" data-url="./deanoffice/departPlanSet.html" href="#1"  class="data-url">配置院系转专业计划</a></li>
+        <li><a role="presentation" data-url="./deanoffice/departPlanCheck.html" href="#1"  class="data-url">审核院系转专业计划</a></li>
+        <li><a role="presentation" data-url="./deanoffice/stuRegiSet.html" href="#1"  class="data-url">开启学生报名通道</a></li>
+        <li><a role="presentation" data-url="./deanoffice/departFstTrialList.html" href="#1"  class="data-url">院系初审结果查询</a></li>
+        <li><a role="presentation" data-url="./deanoffice/departExamScheList.html" href="#1"  class="data-url">院系考试安排查询</a></li>
+
+        <li><a role="presentation" data-url="./deanoffice/departEnrollCheck.html" href="#1"  class="data-url">审核院系最终录取结果</a></li>
+
+        <li><a role="presentation" data-url="./deanoffice/jwcdshsqList.html" href="#1"  class="data-url">教务处待审核申请记录列表</a></li>
+        <li><a role="presentation" data-url="./deanoffice/jwcyshsqList.html" href="#1"  class="data-url">教务处查看申请记录列表</a></li>
+    </ul>
 </div>
 <div id="main">
     <iframe id="main-iframe" src=""></iframe>
@@ -65,7 +74,6 @@
         })
         $('[role=presentation]').first().click();
     })
-
 </script>
 </body>
 </html>

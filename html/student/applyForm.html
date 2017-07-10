@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/paging.css">
+    <link rel="stylesheet" href="../../css/relation-search.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+
+    <script src="../../js/relation-search.js"></script>
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        div.form-850 input{
+            background: #CCCCCC;
+        }
+
+        div.form-850 div.mar_top50{
+            margin-top: 50px;
+        }
+
+        div.form-850 div.mar_top5{
+            margin-top: 5px;
+        }
+
+        div.form-850 div.height120{
+            height: 120px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+
+    <!--表单区域-->
+    <div class="form form-850" >
+
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>姓名：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="李飞" readonly="true"/>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>性别：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="男" readonly="true"/>
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>学号：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="0271828" readonly="true"/>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>入学年月：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="2015/6" readonly="true">
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>联系电话：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="89244443" readonly="true"/>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>出生年月：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="2000/7" readonly="true">
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>高考总分：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="620" readonly="true"/>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>高考省市：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="湖北" readonly="true">
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>院(系)：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="economy" readonly="true">
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>专业班：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="经济" readonly="true">
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>转入院(系)：</div>
+            <div class="row-3-1 fl">
+                <select class="fl ml-10">
+                    <option>xxxxxxxx</option>
+                    <option>xxxxxxxxx</option>
+                </select>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>转入专业：</div>
+            <div class="row-3-1 fl">
+                <select class="fl ml-10">
+                    <option>xxxxxxxx</option>
+                    <option>xxxxxxxxx</option>
+                </select>
+            </div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>转专业理由：</div>
+            <div class="row-3-1 fl">
+                <select class="fl ml-10" >
+
+                    <option>不喜欢原专业</option>
+                    <option>有喜欢的异性在那个专业</option>
+                    <option>有喜欢的同性在那个专业</option>
+                    <option>其他</option>
+                </select>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>所住寝室：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="韵苑13栋412" readonly="true">
+            </div>
+            <div class="cl"></div>
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20 height120">
+            <div class="width_auto tl-r fl" ><span class="c-red">*</span>初高中阶段所获各种奖励：</div>
+
+            <textarea></textarea>
+
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20 height120">
+            <div class="tl-r fl width_auto" ><span class="c-red">*</span>申请书：&nbsp;&nbsp;&nbsp;</div>
+
+            <textarea></textarea>
+
+            <div class="cl"></div>
+        </div>
+
+        <div class="row mb-20">
+            <div class="row-title tl-r fl "><span class="c-red">*</span>上传附件：</div>
+            <div class="row-3-1 fl mar_top5">
+                <input type="file" id="file">
+            </div>
+            <div class="cl"></div>
+        </div>
+
+
+        <div class="row tl-c mar_top50">
+            <button class="submit" onclick="javascript:void(0)">提交</button>&nbsp;&nbsp;
+            <button class="submit">重置</button>
+        </div>
+</div>
+</body>
+
+</html>
