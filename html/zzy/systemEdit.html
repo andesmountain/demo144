@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+        textarea{
+            height: 200px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body >
+<div class="form form-1000">
+    <div class="big-title mt-15 mb-15 tl-c">xx院系转专业具体配置</div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>转入类型：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"  value="启明学院" readonly="true" style="background:#CCCCCC"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>入学时间：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"/>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>开放时间：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>关闭时间：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"/>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+    <div>
+        <iframe id="main-iframe" src="depTree.html" style="width: 800px;height: 270px"></iframe>
+
+    </div>
+
+    <div class="row tl-c" style="margin-top: 20px;">
+        <button class="submit" onclick="ensure()">确定</button>&nbsp;&nbsp;
+        <button class="submit">重置</button>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+//        $("select").setAttribute("disabled","false");
+//        $(":input").setAttribute("readonly","readonly");
+//        alert("aksjdfkasjfkas")
+    })
+    function ensure(){
+        alert("确定修改");
+    }
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Tree - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.5.2/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../jquery-easyui-1.5.2/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../jquery-easyui-1.5.2/demo.css">
+
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/relation-search.css">
+	<link rel="stylesheet" href="../../css/alertIframe.css">
+	<link rel="stylesheet" href="../../css/boot-css.css">
+	<script type="text/javascript" src="../../jquery-easyui-1.5.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+
+	<style>
+		.ui-checkbox
+		{
+			position:relative;
+			width: 100%;
+		}
+		.ui-checkbox input[type=checkbox] { display: none;}
+		.ui-checkbox span{
+			cursor: pointer;
+			font-family: 微软雅黑;
+			font-size: 16px;
+		}
+
+		.ui-checkbox input[type=checkbox]+span:before
+		{
+			content: "";
+			width: 18px;
+			height: 18px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-top: -3px;
+			background-color: transparent;
+			border-radius: 2px;
+			background-color: #e3e3e3;
+		}
+
+		.ui-checkbox input[type=checkbox]:checked+span:before
+		{
+			background-color: #3aab4e;
+		}
+
+		.ui-checkbox input[type=checkbox]:checked+span:after
+		{
+			font-size: 12px;
+			content: '✔';
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			top: 1px;
+			left: 4px;
+			color: #FFF;
+			display: block;
+		}
+
+		.ui-checkbox input[type=checkbox]:disabled:checked+span:before
+		{
+			opacity: .65;
+			background-color: #e3e3e3;
+			border: 1px solid #e3e3e3;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="easyui-layout" style="width:100%;height:100%;">
+
+		<div data-options="region:'west',split:true" title="院系和特殊人群" style="width:200px;">
+			<ul class="easyui-tree" id="tree" data-options="url:'tree_data1.json',method:'get',animate:true,dnd:true,lines:true"></ul>
+		</div>
+		<div data-options="region:'center',title:'分类',iconCls:'icon-ok'" id="centerDiv">
+
+			<div id="treeText" class="row-3-1" style="margin: 10px"></div>
+		</div>
+	</div>
+<script>
+	$(function(){
+        $('#tree').tree({
+
+            onClick:function(node){//单击事件
+
+
+
+				try{
+                    var attrs = node.attributes.major;  //json类型字符串
+                    var obj =  eval("("+attrs+")");  //json对象
+					var str = "";
+
+              		var strhead = '<label class="ui-checkbox"><input type="checkbox" checked='+'><span>';
+              		var strtail = '</span></label><br>';
+                    for(var keyword in obj){
+
+                        str +='<label class="ui-checkbox"><input type="checkbox" ';
+                        str += obj[keyword]==1?"checked='checked'":"";
+                        str +='><span>';
+        				str += keyword;
+        				str +='</span></label><br>';
+
+                    }
+                    $('#treeText').html(str);
+				}
+				catch(err){
+                    $('#treeText').html("nothing");
+				}
+
+            }
+        });
+
+	})
+
+
+</script>
+
+</body>
+</html>

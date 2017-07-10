@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 500px;
+        }
+
+        input {
+
+            background: #CCCCCC;
+        }
+        ul,li{list-style:none;}
+        .flow_steps{height:55px;width:1000px;margin:100px  auto;}
+        .flow_steps .steps{padding-left:0;}
+        .flow_steps ul li { float:left; height:55px; padding:0 70px 0 50px; line-height:55px; text-align:center; background:url(../image/stepbg.png) no-repeat 100% 0 #E4E4E4;font-family: "microsoft yahei";color:#6C6C6C;}
+        .flow_steps ul li.done { background-position:100% 0px; background-color:#E1E1E1;}
+        .flow_steps ul li.current_prev { background-position:100% -55px; background-color:#E1E1E1;}
+        .flow_steps ul li.current { color:#fff; background-color:#DD4D3C;}
+        .flow_steps ul li.last { background-image:none;}
+        .flow_steps ul li.first { border-radius:10px 0 0 10px; }
+        .flow_steps ul li.last { border-radius:0 10px 10px 0; }
+    </style>
+
+</head>
+<body style="height:380px;">
+<div class="form form-1000">
+    <div class="big-title mt-15 mb-15 tl-c">转专业申请进度</div>
+    <div class="flow_steps " align="center">
+        <ul class="steps">
+            <li class=" done first current_prev ">
+                第一步
+            </li>
+            <li class=" done ">
+                第二步
+            </li>
+            <li class=" current">
+                第三步
+            </li>
+            <li class=" last">
+                第四步
+            </li>
+        </ul
+</div>
+</body>
+<script>
+    $(function () {
+//        $("select").setAttribute("disabled","false");
+//        $(":input").setAttribute("readonly","readonly");
+//        alert("aksjdfkasjfkas")
+    })
+</script>
+</html>

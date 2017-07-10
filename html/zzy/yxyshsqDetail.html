@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 500px;
+            background: #CCCCCC;
+        }
+
+        input {
+            background: #CCCCCC;
+        }
+
+        .box {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+<body style="height:380px;">
+<div class="form form-1000" style="width: auto">
+    <div class="big-title mt-15 mb-15 tl-c" style="width: 100%;">华中科技大学本科生申请转专业审批表（实验班）</div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>姓名：</div>
+        <div class="row-3-1 fl ">
+            <input type="text" class="fl ml-10" value="李飞" readonly="true"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>性别：</div>
+        <div class="row-3-1 fl ">
+            <input type="text" class="fl ml-10" value="男" readonly="true"/>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>学号：</div>
+        <div class="row-3-1 fl ">
+            <input type="text" class="fl ml-10" value="0271828" readonly="true"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>入学年月：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="2015/6" readonly="true">
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>联系电话：</div>
+        <div class="row-3-1 fl ">
+            <input type="text" class="fl ml-10" value="89244443" readonly="true"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>出生年月：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="2000/7" readonly="true">
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>高考总分：</div>
+        <div class="row-3-1 fl ">
+            <input type="text" class="fl ml-10" value="620" readonly="true"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>高考省市：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="湖北" readonly="true">
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>院(系)：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="economy" readonly="true">
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>专业班：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="经济" readonly="true">
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>转入院(系)：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="机械" readonly="true">
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>转入专业：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="机械工程" readonly="true">
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl" style="width: 110px;text-align: left;"><span class="c-red">*</span>转专业理由：</div>
+
+        <div class="row-3-1 fl" style="width: 290px;margin-left: 0px;">
+            <input type="text" class="fl ml-10" style="margin-left: 0px;" value="不喜欢原专业" readonly="true">
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>所住寝室：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10" value="韵苑13栋412" readonly="true">
+        </div>
+        <div class="cl"></div>
+
+    </div>
+    <div class="row mb-20" style="height: 120px;">
+        <div class="row-title tl-r fl" style="width: auto"><span class="c-red">*</span>初高中阶段所获各种奖励：</div>
+
+        <textarea style="height: 80%;width: 96%;" readonly="readonly">骑马射箭冠军</textarea>
+
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20" style="height: 120px;">
+        <div class="row-title tl-r fl" style="width: auto"><span class="c-red">*</span>申请书：&nbsp;&nbsp;&nbsp;</div>
+
+        <textarea style="height: 80%;width: 96%;">我志愿成为一名优秀的机械制造师</textarea>
+
+        <div class="cl"></div>
+    </div>
+
+    <div class="mb-20" style="height: auto">
+        <div class="row-title tl-r fl" style="width: auto"><span class="c-red">*</span>上传附件：&nbsp;&nbsp;&nbsp;</div>
+        <div class="row-3-1 fl row-title">
+            <ui>
+                <li>
+                    <a href="javascritp:void(0);" class="box">附件1</a>
+                </li>
+                <li>
+                    <a href="javascritp:void(0);" class="box">附件2</a>
+                </li>
+                <li>
+                    <a href="javascritp:void(0);" class="box">附件3</a>
+                </li>
+            </ui>
+        </div>
+        <div class="row-title tl-r fl" style="width: auto;"><span class="c-red">*</span>成绩单查询：</div>
+        <div class="row-3-1 fl">
+            <a href="javascritp:void(0);" class="box">查询</a>
+        </div>
+        <div class="cl"></div>
+
+    </div>
+    <div class="row mb-20" style="height: 120px;">
+        <div class="row-title tl-r fl" style="width: auto"><span class="c-red">*</span>拟转入院系意见：&nbsp;&nbsp;&nbsp;</div>
+
+        <textarea style="height: 80%;width: 96%;" readonly="readonly">是个好同志，组织可以重点培养</textarea>
+
+        <div class="cl"></div>
+    </div>
+
+
+</div>
+</body>
+<script>
+    $(function () {
+//        $("select").setAttribute("disabled","false");
+//        $(":input").setAttribute("readonly","readonly");
+//        alert("aksjdfkasjfkas")
+    })
+</script>
+</html>

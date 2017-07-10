@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+        textarea{
+            height: 200px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+<div class="form form-1000">
+    <div class="big-title mt-15 mb-15 tl-c">华中科技大学本科生申请转专业审批表</div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>姓名：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"  />
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>性别：</div>
+        <div class="row-3-1 fl">
+            <select class="fl ml-10" >
+                <option>男</option>
+                <option>女</option>
+            </select>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>学号：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"/>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>入学年月：</div>
+        <div class="row-3-1 fl">
+            <input type="text" class="fl ml-10"/>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>院(系)：</div>
+        <div class="row-3-1 fl">
+            <select class="fl ml-10" >
+                <option>xxxxxxxx</option>
+                <option>xxxxxxxxx</option>
+            </select>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>专业班：</div>
+        <div class="row-3-1 fl">
+            <select class="fl ml-10">
+                <option>xxxxxxxx</option>
+                <option>xxxxxxxxx</option>
+            </select>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>转入院(系)：</div>
+        <div class="row-3-1 fl">
+            <select class="fl ml-10">
+                <option>xxxxxxxx</option>
+                <option>xxxxxxxxx</option>
+            </select>
+        </div>
+        <div class="row-title tl-r fl"><span class="c-red">*</span>转入专业：</div>
+        <div class="row-3-1 fl">
+            <select class="fl ml-10">
+                <option>xxxxxxxx</option>
+                <option>xxxxxxxxx</option>
+            </select>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20" style="height: 120px;">
+        <div class="little-title mt-15 mb-15 tl-l">转专业理由：</div>
+        <textarea style="height: 80%;width: 95%;"></textarea>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20">
+        <div class="row-title tl-r fl"><span class="c-red">*</span>上传文件：</div>
+        <div class="row-3-1 fl">
+            <input type="file" id="file" >
+        </div>
+        <div class="cl"></div>
+    </div>
+    <div class="row mb-20" style="height: 120px;">
+        <div class="little-title mt-15 mb-15 tl-l">拟转入院(系)意见:</div>
+        <textarea style="height: 80%;width: 95%;"></textarea>
+        <div class="cl"></div>
+    </div>
+    <div class="row tl-c" style="margin-top: 50px;">
+        <button class="submit" onclick="onTest()">提交</button>&nbsp;&nbsp;
+        <button class="submit">重置</button>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+//        $("select").setAttribute("disabled","false");
+//        $(":input").setAttribute("readonly","readonly");
+//        alert("aksjdfkasjfkas")
+    })
+</script>
+</html>

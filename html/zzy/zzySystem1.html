@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+        .myButton{
+            font-family: 微软雅黑;
+            padding: 0 10px;
+            height: 32px;
+            border-radius: 4px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            background-color: #206ab1;
+            cursor: pointer;
+            margin-top: 50px;
+            margin-left: 130px;
+        }
+        .h-34{
+            height: 34px;line-height: 34px
+        }
+        #yzkcInfo{
+            display: none;
+        }
+        .text-center{
+            text-align: center;
+        }
+        h3{
+            font-family: 微软雅黑;
+            font-size: 22px;
+        }
+        .checkboxList{
+            margin-top: 12px;
+            margin-left:10px;
+        }
+        .ui-checkbox
+        {
+            position:relative;
+            width: 100%;
+        }
+        .ui-checkbox input[type=checkbox] { display: none;}
+        .ui-checkbox span{
+            cursor: pointer;
+            font-family: 微软雅黑;
+            font-size: 16px;
+        }
+
+        .ui-checkbox input[type=checkbox]+span:before
+        {
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -3px;
+            background-color: transparent;
+            border-radius: 2px;
+            background-color: #e3e3e3;
+        }
+
+        .ui-checkbox input[type=checkbox]:checked+span:before
+        {
+            background-color: #3aab4e;
+        }
+
+        .ui-checkbox input[type=checkbox]:checked+span:after
+        {
+            font-size: 12px;
+            content: '✔';
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 1px;
+            left: 4px;
+            color: #FFF;
+            display: block;
+        }
+
+        .ui-checkbox input[type=checkbox]:disabled:checked+span:before
+        {
+            opacity: .65;
+            background-color: #e3e3e3;
+            border: 1px solid #e3e3e3;
+        }
+        .zylist{
+            /*margin-top: 20px;*/
+            /*clear: both;*/
+        }
+        .list{
+            margin-left: 280px;
+            margin-top: 75px;
+        }
+        .tittle{
+            float:left;
+            width:120px;
+            font-size: large ;
+        }
+        .tittle div{
+            /*float: left;*/
+        }
+        select,input{
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-content">
+    <!--导航-->
+    <div class="nav">
+        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;转专业&nbsp;-&nbsp;转专业设置
+    </div>
+    <!--提示区域-->
+    <div class="tip pl-10 pt-10 pb-10" style="min-width: 500px">
+        本界面可以完成对转专业事项配置<br/>
+    </div>
+    <div class="form form-700">
+           <div><h3>基础配置:</h3></div>
+            <div  style="margin-top: 20px;float: left">
+                <div class="tittle">选择类型：</div>
+                    <div style="float:left">
+                        <select >
+                            <option>请选择类型</option>
+                            <option>学科大类转专业</option>
+                            <option>专业分流</option>
+                            <option>启明学院</option>
+                            <option>校际交流</option>
+                            <option>普通转专业</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div style="float: left;clear: both ;margin-top: 20px;margin-left: 275px">
+                <div class="tittle">开放时间：</div>
+                <div style="float:left"><input type="text" placeholder="开始时间"></div>
+                <div style="float:left;margin-left: 10px"><input type="text" placeholder="结束时间"></div>
+            </div>
+
+            <div  style="margin-top: 20px;float: left ;clear: both;margin-left: 275px">
+                <div class="tittle">选择院系：</div>
+                <div style="float:left">
+                    <select >
+                        <option>请选择院系</option>
+                        <option>xxxxx学院</option>
+                        <option>xxxxx学院</option>
+                        <option>xxxxx学院</option>
+                        <option>xxxxx学院</option>
+                        <option>xxxxx学院</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+            <div  style="float: left;clear: both ;margin-top: 20px;margin-left: 275px">
+                <div class="tittle">可选专业：</div>
+                <div style="margin-left: 120px">
+                    <div class="checkboxList">
+                        <label class="ui-checkbox"><input type="checkbox" ><span>国防生</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>艺术类</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>高水平运动员</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>保送生</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>自主招生</span></label>
+                    </div>
+                    <div class="checkboxList">
+                        <label class="ui-checkbox"><input type="checkbox" ><span>保送生</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>自主招生</span></label>
+                    </div>
+                </div>
+            </div>
+            <div  style="float: left;clear: both ;margin-top: 20px;margin-left: 275px">
+                <div class="tittle">转专业资格：</div>
+                <div style="margin-left: 120px">
+                    <div class="checkboxList">
+                        <label class="ui-checkbox"><input type="checkbox" ><span>国防生</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>艺术类</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>高水平运动员</span></label>
+                    </div>
+                    <div class="checkboxList">
+                        <label class="ui-checkbox"><input type="checkbox" ><span>保送生</span></label>
+                        <label class="ui-checkbox"><input type="checkbox" ><span>自主招生</span></label>
+                    </div>
+                </div>
+            </div>
+            <div style="float: left;clear: both ;margin-top: 20px;margin-left: 275px">
+                <button class="myButton">保存配置</button>
+            </div>
+
+    </div>
+</div>
+
+
+
+
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

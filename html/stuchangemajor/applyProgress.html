@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" href="../../css/iF.step.css" rel="stylesheet">
+
+    <title>Step - iForms UI</title>
+    <style>
+        iframe {
+            width: 850px;height: auto;border:none;
+        }
+        .iframeHeight800 {
+            height: 800px;
+        }
+    </style>
+    <script>
+        function setIframeHeight(iframe) {
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div style="width:70%; height: 1000px;margin:20px auto">
+
+    <h2>学生转专业进度：</h2>
+    <ol class="ui-step ui-step-5">
+        <li class="step-start step-done">
+            <div class="ui-step-line"></div>
+            <div class="ui-step-cont">
+                <span class="ui-step-cont-number" data-url="./applyForm.html" role="">1</span>
+                <span class="ui-step-cont-text">报名</span>
+            </div>
+        </li>
+        <li class="step-done">
+            <div class="ui-step-line"></div>
+            <div class="ui-step-cont">
+                <span class="ui-step-cont-number" data-url="./firstTrialLink.html">2</span>
+                <span class="ui-step-cont-text">院系初审</span>
+            </div>
+        </li>
+        <li class="step-active">
+            <div class="ui-step-line"></div>
+            <div class="ui-step-cont">
+                <span class="ui-step-cont-number" data-url="./offlineExamLink.html">3</span>
+                <span class="ui-step-cont-text">线下考核</span>
+            </div>
+        </li>
+        <li class="">
+            <div class="ui-step-line"></div>
+            <div class="ui-step-cont">
+                <span class="ui-step-cont-number" data-url="./examPublicityLink.html">4</span>
+                <span class="ui-step-cont-text">院系公示</span>
+            </div>
+        </li>
+        <li class="step-end">
+            <div class="ui-step-line"></div>
+            <div class="ui-step-cont">
+                <span class="ui-step-cont-number">5</span>
+                <span class="ui-step-cont-text">转专业成功</span>
+            </div>
+        </li>
+    </ol>
+    <div style="margin-top: 100px;">
+        <iframe id="main-iframe" src=""></iframe>
+    </div>
+</div>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function () {
+        //只能打开step-done和step-active下的页面,这里采用并集
+        $('.step-active,.step-done').find('.ui-step-cont-number').click(function (event) {
+            var e = event.currentTarget;
+
+            $('#main-iframe').attr("src", $(e).attr("data-url"));
+            setIframeHeight($('#main-iframe'));
+        });
+        //默认是打开class='step-active'下的data-url页面
+        $('#main-iframe').attr("src", $('.step-active').find('.ui-step-cont-number').attr("data-url"));
+    });
+</script>
+
+</body>
+</html>

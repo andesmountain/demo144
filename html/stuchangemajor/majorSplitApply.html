@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/paging.css">
+    <link rel="stylesheet" href="../../css/relation-search.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <!--<link rel="stylesheet" href="../../css/boot-css.css">-->
+    <!--<link rel="stylesheet" href="../../css/bootstrap.min.css">-->
+    <!--<link rel="stylesheet" href="../../css/bootstrap/theme.css">-->
+    <!--<script src="../../js/paging.js"></script>-->
+    <script src="../../js/relation-search.js"></script>
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 500px;
+        }
+
+        input {
+            background: #CCCCCC;
+        }
+        iframe{
+            width: 100%;
+            height:820px;
+        }
+    </style>
+</head>
+<body>
+<div class="page-content">
+    <!--导航-->
+    <div class="nav">
+        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;转专业&nbsp;-&nbsp;专业分流申请表
+    </div>
+    <!--提示区域-->
+    <div class="tip pl-10 pt-10 pb-10">
+        专业分流申请表。<br/>
+        更多注意事项与使用帮助请查看<a href="javascript:;" onclick="alert('弹窗，打开查看本页帮助');">【打开本页帮助】</a>。
+    </div>
+    <!--表单区域-->
+    <div class="form form-850">
+        <div class="big-title mt-15 mb-15 tl-c">华中科技大学本科生申请转专业审批表（专业分流）</div>
+        <br><span style="color: red">有第一第二志愿,还待完善</span>
+    </div>
+    <iframe src="applyForm.html"></iframe>
+
+</body>
+<script>
+    function open() {
+//        window.location.href("www.baidu.com");
+    }
+</script>
+</html>

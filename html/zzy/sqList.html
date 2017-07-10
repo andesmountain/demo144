@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/paging.css">
+    <link rel="stylesheet" href="../../css/relation-search.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <link rel="stylesheet" href="../../css/boot-css.css">
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+        .supply {
+            height: 34px;
+            line-height: 34px;
+        }
+        .relative {
+            position: relative;
+        }
+        .hiden{display: none}
+        input.edit{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="page-content form">
+    <!--导航-->
+    <div class="nav">
+        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;转专业&nbsp;-&nbsp;申请记录列表
+    </div>
+    <!--提示区域-->
+    <div class="tip pl-10 pt-10 pb-10">
+       该界面可以查看转专业申请记录
+    </div>
+    <!--列表显示区域-->
+
+    <table id="test" class="list-table mt-20">
+        <thead>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>学号</th>
+
+
+            <th>转专业类型</th>
+            <th>原院(系)</th>
+            <th>原专业</th>
+            <th>转入院(系)</th>
+            <th>转入专业</th>
+            <th>申请时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="tl-c">1</td>
+            <td class="tl-c"><div class="show">李飞</div></td>
+            <td class="tl-c">0271828</td>
+
+            <td class="tl-c"><div class="show">启明学院</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c"><div class="show">Economic Theory</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c"><div class="show">经济学院</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c"><div class="show">Economic Theory</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c"><div class="show">经济学院</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c"><div class="show">2016.10.25</div><input type="text" class="edit hiden"/></td>
+            <td class="tl-c">
+                <button class="btn btn-info btn-xs" onclick="edit()">查看详情</button>
+                <!--<button class="btn btn-info btn-xs" onclick="viewProgress()">查看进度</button>-->
+
+                <!--<button class="btn btn-info btn-xs" onclick="edit()">修改</button>-->
+                <!--<button class="btn btn-danger btn-xs" onclick="location.reload()">删除</button>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="hiden">
+        <tr id="addrow">
+            <td class="tl-c">2</td>
+            <td class="tl-c"></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><input type="text" class="edit "/></td>
+            <td class="tl-c"><select class="edit "><option>-请选择-</option><option>是</option><option>否</option></select></td>
+            <td class="tl-c">
+                <div style="display: inline-block;width: 100px;">
+                    <button class="hiden edit-a btn btn-info btn-xs" >修改</button>
+                    <button class="hiden del-a btn btn-danger btn-xs" onclick="location.reload()">删除</button>
+                    <button class="save-a btn btn-success btn-xs" onclick="location.reload()">保存</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script src="../../js/paging.js"></script>
+<script src="../../js/relation-search.js"></script>
+<script src="../../js/alertIframe.js"></script>
+<script>
+    $(function () {
+        setItemEditClick();
+        setItemSaveClick();
+        setItemDelClick();
+    })
+
+    function onKcInsertClick() {
+        var oTable=document.getElementById("test");
+        var length=document.getElementById("test").rows.length;
+        var oTr = oTable.insertRow(length);
+        oTr.innerHTML = document.getElementById("addrow").innerHTML;
+    }
+
+    var page = new Paging();
+
+
+    page.init({
+        target: $('#pageTool'), pagesize: 10, count: 100, callback: function (pagecount, size, count) {
+            console.log(arguments)
+            alert('当前第 ' + pagecount + '页,每页 ' + size + '条,总页数：' + count + '页');
+            //动态设置总条数 https://github.com/tianxiangbing/paging
+            page.render({count: 89, current: pagecount});
+        }
+    });
+
+
+    $(function () {
+        relationSearch({
+            url: "../../js/package.json",
+            type: "GET",
+            input: $("#filter input[name=kcmc]")[0],
+            urlCallBack:function (data) {
+                //这是网络请求结果的回调，retrun你需要的list；（必要）
+                return data;
+            },
+            itemClickCallBack:function (item) {
+                //这是item点击时的回调，在此进行业务操作；（必要）
+                $("#filter input[name=kcmc]").val(item.KCMC);
+                $("#filter input[name=kcdm]").val(item.KCDM);
+            },
+            outClickCallBack:function (para) {
+                //这是点击其他地方的回调；（非必要）
+                if(!para.lastItem){
+                    $("#filter input[name=kcmc]").val("");
+                    return;
+                }
+                if(!$("#filter input[name=kcmc]").val()){
+                    para.lastItem="";
+                    return;
+                }
+                $("#filter input[name=kcmc]").val(para.lastItem.KCMC);
+                $("#filter input[name=kcdm]").val(para.lastItem.KCDM);
+            },
+            liContentCallBack:function (item) {
+                //这是对每个item进行渲染的方法，按你需要进行样式、内容的编写。（必要）
+                return item.KCMC+'/'+item.KKYX+'/'+item.KCDM+'/'+item.XF+'学分/'+item.XS+'学时';
+            },
+            checkIfAjaxCallBack:function (para) {
+                //检查是否进行网络请求，非必要，如不填默认一直可进行。
+                if(!para.lastItem){return true}
+                if(para.lastItem.KCMC==$("#filter input[name=kcmc]").val()){
+                    return false;
+                }
+                return true;
+            }
+        })
+    })
+
+    function setItemEditClick() {
+        $(".edit-a").click(function (event) {
+            var e=event.currentTarget;
+            $('.del-a,.edit-a').hide();
+            $('.save-a').show();
+            $(e).parent().siblings().children(".show").hide().siblings(".edit").show();
+        })
+    }
+    function setItemSaveClick() {
+        $(".save-a").click(function (event) {
+            location.reload()
+        })
+    }
+    function setItemDelClick() {
+        $(".del-a").click(function (event) {
+            location.reload()
+        })
+    }
+
+    function test() {
+        alert("1")
+    }
+    function detail() {
+        alertIframe('ptzzyDetail.html',{width:"1200px"});
+    }
+    function edit() {
+        alertIframe('ptzzyEdit.html',{width:"850px"});
+    }
+    function viewProgress() {
+        alertIframe('ptzzyProgress2.html',{width:"820px",height:"300px"});
+
+    }
+</script>
+</body>
+</html>

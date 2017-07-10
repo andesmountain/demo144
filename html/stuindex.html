@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/relation-search.css">
+    <link rel="stylesheet" href="../css/alertIframe.css">
+    <link rel="stylesheet" href="../css/boot-css.css">
+    <link rel="stylesheet" href="../css/mouseTip.css">
+    <title>学生主页</title>
+    <style>
+        #main{
+            position: absolute;
+            left: 140px;
+            top:0;
+            bottom: 0;
+            right: 0;
+        }
+        #menu{
+            width: 130px;
+            height: 100%;
+            margin-left: 10px;
+        }
+        #menu>ul>li{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 2px 0;
+            cursor: pointer;
+        }
+        #menu>ul>li:hover{
+            background-color: gold;
+        }
+        #main-iframe{
+            width: 100%;
+            height: 100%;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body >
+<div id="menu">
+    <ul>
+        <li><a role="presentation" data-url="./stuchangemajor/changeMajorApply.html" href="#1"  class="data-url">学生转专业申请</a></li>
+        <li><a role="presentation" data-url="./stuchangemajor/applyProgress.html" href="#1"  class="data-url">学生申请记录列表</a></li>
+     </ul>
+</div>
+<div id="main">
+    <iframe id="main-iframe" src=""></iframe>
+</div>
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/paging.js"></script>
+<script src="../js/relation-search.js"></script>
+<script src="../js/alertIframe.js"></script>
+<script>
+    $(function () {
+        $('[role=presentation]').click(function (event) {
+            var e=event.currentTarget;
+            $(e).siblings('[role=presentation]').removeClass("active");
+            $(e).addClass("active");
+        })
+        $('.data-url').click(function (event) {
+            var e=event.currentTarget;
+            $('#main-iframe').attr("src",$(e).attr("data-url"))
+        })
+        $('[role=presentation]').first().click();
+    })
+
+</script>
+</body>
+</html>

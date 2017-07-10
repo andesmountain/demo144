@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+    <!--<script src="../../js/bootstrap.min.js.js"></script>-->
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        textarea {
+            height: 200px;
+            width: 500px;
+        }
+
+        input {
+
+            background: #CCCCCC;
+        }
+
+        .steps_bar ul { border-left:solid 1px #ccc; overflow:hidden;}
+        .steps_bar ul li { float:left; height:60px; padding-right:19px; line-height:60px; text-align:center; background:url(../image/stepbar.png) no-repeat 100% 0 #f1f1f1; font-weight:bold;}
+        .steps_bar ul li span { display:block; height:58px; padding:0 30px; background:##f1f1f1; border-top:solid 1px #ccc; border-bottom:solid 1px #ccc;}
+        .steps_bar ul li.done { color:#fff; background-position:100% -120px; background-color:#646464;}
+        .steps_bar ul li.current_prev { color:#fff; background-position:100% -60px; background-color:#646464;}
+        .steps_bar ul li.done span, .steps_bar ul li.current_prev span { background:#646464;}
+        .steps_bar ul li.current { color:#fff; background-color:#b70a06;}
+        .steps_bar ul li.current span { background:#b70a06;}
+        .steps_bar ul li.last { background-position:100% -180px; background-color:transparent;}
+        .steps_bar ul li.last span { background:#f1f1f1;}
+        .steps_bar ul li.last.current { background-position:100% -240px;}
+        .steps_bar ul li.last.current span { background:#b70a06;}
+    </style>
+
+</head>
+<body style="width:auto;height: auto;">
+<div style="margin-left: 40px;">
+    <!--<div class="big-title mt-15 mb-15 tl-c">转专业申请进度</div>-->
+    <div class="steps_bar tl-c" >
+        <ul>
+            <li class="current"><span>填写申请</span></li>
+            <li class="last.current"><span>已提交申请</span></li>
+            <li class="last.current"><span>院系审核</span></li>
+            <li class="last.current"><span>教务处审核</span></li>
+
+            <li class="last"><span>审核成功</span></li>
+        </ul>
+    </div>
+</body>
+<script>
+    $(function () {
+//        $("select").setAttribute("disabled","false");
+//        $(":input").setAttribute("readonly","readonly");
+//        alert("aksjdfkasjfkas")
+    })
+</script>
+</html>
