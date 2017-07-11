@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/paging.css">
+    <link rel="stylesheet" href="../../css/relation-search.css">
+    <link rel="stylesheet" href="../../css/alertIframe.css">
+    <link rel="stylesheet" href="../../css/boot-css.css">
+
+    <script src="../../js/relation-search.js"></script>
+    <script src="../../js/alertIframe.js"></script>
+    <script src="../../js/jquery-1.7.2.min.js"></script>
+
+    <style>
+        div.form input[type="number"] {
+            border: solid 1px #000;
+            height: 32px;
+            line-height: 32px;
+            overflow: hidden;
+            font-family: 微软雅黑;
+            font-size: 16px;
+            padding-left: 5px;
+            width: 278px;
+        }
+
+        div.form-850 input {
+            background: #CCCCCC;
+        }
+
+        div.form-850 div.mar_top50 {
+            margin-top: 50px;
+        }
+
+        div.form-850 div.mar_top5 {
+            margin-top: 5px;
+        }
+
+        div.form-850 div.height120 {
+            height: 120px;
+        }
+
+        body {
+            font-size: 14px;
+        }
+
+        input.writeable2 {
+            background: white;
+        }
+
+        body {
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+
+    <!--表单区域-->
+    <div class="form form-850 page-content">
+        <div class="big-title mt-15 mb-15 tl-c mar_top50" style="width: 100%;">院系配置转专业计划</div>
+
+        <div class="row mb-20 mar_top50">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>院系：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="机械学院" readonly="true"/>
+            </div>
+
+            <div class="row-title tl-r fl"><span class="c-red">*</span>类/专业：</div>
+
+            <div class="row-3-1 fl">
+                <select class="fl ml-10">
+                    <option>xxxxxxxx</option>
+                    <option>xxxxxxxxx</option>
+                </select>
+            </div>
+
+            <div class="cl"></div>
+        </div>
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>转专业类型：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" value="普通转专业" readonly="true"/>
+            </div>
+            <div class="row-title tl-r fl"><span class="c-red">*</span>年级：</div>
+            <div class="row-3-1 fl">
+                <input type="text" class="fl ml-10" value="2017级" readonly="true">
+            </div>
+            <div class="cl"></div>
+        </div>
+
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>接收人数：</div>
+            <div class="row-3-1 fl ">
+                <input type="text" class="fl ml-10" style="background: white" value="40"/>
+            </div>
+        </div>
+
+        <div class="row mb-20">
+            <div class="row-title tl-r fl"><span class="c-red">*</span>接收专业：</div>
+
+        </div>
+
+        <!--列表显示区域-->
+
+        <table id="test" class="list-table mt-20">
+            <thead>
+
+            <tr>
+                <td colspan="12">
+                    <!--搜索条件区域-->
+                    <div class="conditions pt-5 pb-5" id="filter">
+
+                        <div class="cds-area fl">
+                            <div class="cds-row">
+                                <div class="cds-title tl-r fl ml-10">原院系：</div>
+                                <select class="fl ml-10">
+                                    <option>xxxxxx院系</option>
+                                    <option>xxxxxx文学院</option>
+                                    <option>xxxxxx院系</option>
+                                    <option>xxxxxx文学院</option>
+                                </select>
+                                <div class="cl"></div>
+                            </div>
+                        </div>
+                        <div class="cds-area fl">
+                            <div class="cds-row">
+                                <div class="cds-title tl-r fl ml-10">原专业：</div>
+                                <select class="fl ml-10">
+                                    <option>xxxxxx专业</option>
+                                    <option>xxxxxx专业</option>
+                                    <option>xxxxxx专业</option>
+                                    <option>xxxxxx专业</option>
+                                </select>
+                                <div class="cl"></div>
+                            </div>
+                        </div>
+                        <div class="cds-area fl">
+                            <div class="cds-act fl cds-act-1">
+                                <button class="search">查询&nbsp;<i class="icon-search"></i></button>&nbsp;
+                                <button class="search">添加&nbsp;<i class="icon-download-alt"></i></button>&nbsp;
+                            </div>
+                            <div class="cl"></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+            <th>序号</th>
+            <th>转入院系</th>
+            <th>转专业类型</th>
+            <th>年级</th>
+            <th>原院系</th>
+            <th>原专业</th>
+            <th>操作</th>
+
+            </thead>
+            <tbody>
+            <!--第一行数据-->
+            <tr>
+                <td class="tl-c">1</td>
+                <td class="tl-c">
+                    <div class="show">机械学院</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">普通转专业</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">2017级</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">能源学院</div>
+
+                <td class="tl-c">
+                    <div class="show">新能源专业</div>
+                </td>
+                <td class="tl-c">
+
+                    <button class="btn btn-info btn-xs" onclick="delItem()">删除</button>
+                </td>
+            </tr>
+            <!--第二行数据-->
+            <tr>
+                <td class="tl-c">2</td>
+                <td class="tl-c">
+                    <div class="show">机械学院</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">普通转专业</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">2017级</div>
+                </td>
+                <td class="tl-c">
+                    <div class="show">船海学院</div>
+
+                <td class="tl-c">
+                    <div class="show">船体专业</div>
+                </td>
+                <td class="tl-c">
+
+                    <button class="btn btn-info btn-xs" onclick="delItem()">删除</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--分页按钮-->
+        <div class="page-list mt-20 mb-15">
+            <div class="fl page-txx mt-5 pl-5">
+                当前第1/21页，每页10条数据，共208条记录
+            </div>
+            <div id="pageTool" class="fr mt-5 mr-10"></div>
+            <div class="page-sel mt-5 pr-5">
+                当前显示
+                <select>
+                    <option>10</option>
+                    <option>20</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>
+                条
+            </div>
+        </div>
+
+
+        <div class="row tl-c mar_top50">
+            <button class="submit" onclick="javascript:void(0)">确定</button>&nbsp;&nbsp;
+            <button class="submit">取消</button>
+        </div>
+    </div>
+    <script>
+        function delItem(){
+            alert("是否删除");
+        }
+    </script>
+</body>
+
+</html>

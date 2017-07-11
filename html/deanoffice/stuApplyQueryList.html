@@ -55,16 +55,16 @@
 <div class="page-content form">
     <!--导航-->
     <div class="nav">
-        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;院系考试安排查询
+        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;学生报名情况统计
     </div>
     <!--提示区域-->
     <div class="tip pl-10 pt-10 pb-10">
-        院系考试安排查询。<br/>
+        学生报名情况统计。<br/>
         更多注意事项与使用帮助请查看<a href="javascript:;" onclick="alert('弹窗，打开查看本页帮助');">【打开本页帮助】</a>。
     </div>
     <!--表单区域-->
     <div class="form form-850">
-        <div class="big-title mt-15 mb-15 tl-c">教务处查看各院系考试安排</div>
+        <div class="big-title mt-15 mb-15 tl-c">教务处查看学生报名情况统计表</div>
     </div>
     <!--列表显示区域-->
 
@@ -82,11 +82,15 @@
             </td>
         </tr>
         <th>序号</th>
-        <th>院系</th>
+        <th>姓名</th>
+        <th>学号</th>
         <th>转专业类型</th>
-        <th>考试时间</th>
-        <th>考试地点</th>
-        <th>考试人数</th>
+        <th>原院系</th>
+        <th>原专业</th>
+        <th>转入院系</th>
+        <th>转入专业</th>
+        <th>报名时间</th>
+        <th>初审状态</th>
         <th>操作</th>
         </tr>
         </thead>
@@ -95,41 +99,66 @@
         <tr>
             <td class="tl-c">1</td>
             <td class="tl-c">
-                <div class="show">机械学院</div>
+                <div class="show">李明</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">200120312</div>
             </td>
             <td class="tl-c">
                 <div class="show">普通转专业</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017/7/20 14:00~16:00</div>
+                <div class="show">机械学院</div>
             </td>
             <td class="tl-c">
-                <div class="show">东二楼C404</div>
+                <div class="show">xx大类</div>
             </td>
             <td class="tl-c">
-                <div class="show">40</div>
+                <div class="show">经济学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">对外贸易</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">2017/7/14</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">驳回</div>
             </td>
             <td class="tl-c">
                 <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
+
             </td>
         </tr>
         <!--第二行数据-->
         <tr>
             <td class="tl-c">2</td>
             <td class="tl-c">
-                <div class="show">经济学院</div>
+                <div class="show">李明</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">200120312</div>
             </td>
             <td class="tl-c">
                 <div class="show">普通转专业</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017/7/21 14:00~16:00</div>
+                <div class="show">机械学院</div>
             </td>
             <td class="tl-c">
-                <div class="show">东二楼C405</div>
+                <div class="show">xx大类</div>
             </td>
             <td class="tl-c">
-                <div class="show">20</div>
+                <div class="show">电信学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">运维</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">2017/7/15</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">通过</div>
             </td>
             <td class="tl-c">
                 <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
@@ -139,19 +168,31 @@
         <tr>
             <td class="tl-c">3</td>
             <td class="tl-c">
-                <div class="show">电信学院</div>
+                <div class="show">王阳明</div>
             </td>
             <td class="tl-c">
-                <div class="show">启明学院</div>
+                <div class="show">200120442</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017/7/25 14:00~17:00</div>
+                <div class="show">普通转专业</div>
             </td>
             <td class="tl-c">
-                <div class="show">东二楼b404</div>
+                <div class="show">机械学院</div>
             </td>
             <td class="tl-c">
-                <div class="show">20</div>
+                <div class="show">xx大类</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">计算机学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">开发</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">2017/7/15</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">未审核</div>
             </td>
             <td class="tl-c">
                 <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
@@ -179,8 +220,15 @@
 </div>
 </body>
 <script>
+
+    function access() {
+        alert("通过");
+    }
+    function oppose() {
+        alert("填写驳回理由");
+    }
     function detail() {
-//        alertIframe('stuApplyForm.html', {width: "900px"});
+        alertIframe('stuApplyForm.html', {width: "900px"});
     }
 
 </script>

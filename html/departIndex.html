@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/alertIframe.css">
     <link rel="stylesheet" href="../css/boot-css.css">
     <link rel="stylesheet" href="../css/mouseTip.css">
-    <title>转专业-教务处</title>
+    <title>转专业-院系</title>
     <style>
         #main{
             position: absolute;
@@ -41,16 +41,20 @@
 <body >
 <div id="menu">
     <ul>
+        <li><a role="presentation" data-url="./department/changePlanSet.html" href="#1"  class="data-url">配置转专业计划</a></li>
+        <li><a role="presentation" data-url="./department/stuRegiQueryList.html" href="#1"  class="data-url">查看学生报名状态</a></li>
+        <li><a role="presentation" data-url="./department/stuFstTrialList.html" href="#1"  class="data-url">报名学生初审</a>
+        <li><a role="presentation" data-url="./department/departPublicity.html" href="#1"  class="data-url">院系公示</a>
+        <li><a role="presentation" data-url="./department/departEnrollSub.html" href="#1"  class="data-url">录取结果</a>
 
-        <li><a role="presentation" data-url="./deanoffice/departPlanSet.html" href="#1"  class="data-url">配置院系转专业计划</a></li>
-        <li><a role="presentation" data-url="./deanoffice/departPlanCheck.html" href="#1"  class="data-url">审核院系转专业计划</a></li>
-        <li><a role="presentation" data-url="./deanoffice/stuRegiSet.html" href="#1"  class="data-url">开启学生报名通道</a></li>
-        <li><a role="presentation" data-url="./deanoffice/stuApplyQueryList.html" href="#1"  class="data-url">学生报名情况查询</a></li>
-        <li><a role="presentation" data-url="./deanoffice/departExamScheList.html" href="#1"  class="data-url">院系考试安排查询</a></li>
 
-        <li><a role="presentation" data-url="./deanoffice/departEnrollCheck.html" href="#1"  class="data-url">审核院系最终录取结果</a></li>
+        <li><a role="presentation" data-url="./department/departFlowQueryList.html" href="#1"  class="data-url">查看学院转入/转出状态</a>
 
-      </ul>
+
+
+
+
+    </ul>
 </div>
 <div id="main">
     <iframe id="main-iframe" src=""></iframe>
@@ -72,6 +76,7 @@
         })
         $('[role=presentation]').first().click();
     })
+
 </script>
 </body>
 </html>

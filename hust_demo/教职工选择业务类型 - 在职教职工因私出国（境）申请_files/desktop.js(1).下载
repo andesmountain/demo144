@@ -1,0 +1,43 @@
+
+$(document).ready(function(){
+//	$(".no_action").html("已处理");
+	var progressInterval=setInterval(function(){
+		var length=$(".form_remark_holder ul").size();
+		if(length>0){
+			clearInterval(progressInterval);
+			var ul=$(".form_remark_holder ul").clone(false);
+			$(".form_remark_holder ul").remove();
+			$(".form_remark_holder").append(ul);
+			$(".lastMore").click(function(){
+				$(this).hide();
+                $(this).nextAll("li").show("slide", {
+                    direction: "up"
+                }, "slow", function() {
+                    $("#form_remark_holder").css("height", "100%");
+                })
+			});
+			$(".form_remark_time").each(function(index,item){
+				var dateStr=$(this).attr("title").substr(5,16);
+				$(this).html(dateStr);
+			})
+		}
+	},200);
+	InfoPlus.Language.common.confirmAction="确定";
+	var interval=setInterval(function(){
+		if($("#master_footer").size()>0){
+			clearInterval(interval);
+			$("#master_footer").empty();
+			var footerDiv=$("<div class='master_footer_div'><p class='footer_top'>华中科技大学信息门户</p><p class='footer_center'></p>"+
+				"<p class='footer_bottom'><a href='#' class='first'>反馈建议</a>|<a href=''#''>应用中心</a>|<a href='#'>官方微博</a>|<a href='#'>服务协议</a>|<a href='#'>网站地图</a>|<a href='#'>帮助</a>|<a href='#'>技术支持：东软集团</a></p></div>");
+			$("#master_footer").append(footerDiv);
+		}
+	},200);
+})
+
+
+
+
+
+
+
+

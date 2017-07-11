@@ -1,0 +1,151 @@
+.dialog_footer{
+	float:right;
+}
+.dialog_button.fr{
+	float:left;
+	background: #fff;
+}
+.dialog_button.rightest{
+	background:#eee;
+}
+
+
+#title_holder{
+	background: url(../img/banner.jpg) repeat-x;
+}
+#title_content{
+	font-weight: normal;
+}
+#form_command_bar{
+	background: #cae6f2;
+}
+#form_command_bar .command_button a.command_button_content{
+	border-radius: 20px;
+	color: #3e5f80;
+	font-weight: normal;
+}
+#form_command_bar .command_button a.command_button_content:hover{
+	color: #fff;
+	background: #3e5f80;
+	font-weight: normal;
+}
+#form_command_bar .tool_button a.tool_button{
+	color: #3E5F80;
+}
+#form_command_bar .tool_button a.tool_button.disabled{
+	color: #acacac;
+}
+#command_bar_title_icon{
+	background: #305076!important;
+}
+#nav_menu .menu_icon_history,#nav_menu .menu_icon_save,#nav_menu .menu_icon_help,#nav_menu .menu_icon_print,#nav_menu .menu_icon_download{
+	color: #576B84;
+}
+#nav_menu .menu_text{
+	color: #576b84;
+}
+#nav_menu .menu_icon.disabled{
+	color: #acacac;
+}
+#nav_menu .menu_text.disabled{
+	color: #acacac;
+}
+#master_footer{
+	height: 117px;
+	position: relative;
+	width: 100%;
+}
+.master_footer_div{
+	height: 117px;
+	width: 100%;
+	background: url(../img/footer_banner.jpg) repeat-x;
+	color: #fff;
+	padding: 27px 15px 0px;
+	box-sizing: border-box;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+.master_footer_div p{
+	margin: 0px;
+	text-align: left;
+	color: #fff;
+}
+.master_footer_div .footer_center{
+	background: #657e9c;
+	height: 1px;
+}
+.master_footer_div .footer_top,.master_footer_div .footer_bottom{
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+}
+.master_footer_div .footer_bottom{
+	color: #657E9C;
+}
+.master_footer_div .footer_bottom a{
+	color: #fff;
+	margin:0  5px;
+	text-decoration: none;
+}
+.master_footer_div .footer_bottom a.first{
+	margin-left: 0px;
+}
+#form_command_bar li.no_action{
+	color: #2b4b72;
+}
+.form_milestone_step.green{
+	background: #60768d;
+}
+.form_milestone_step .floater.green{
+	background: #60768d;
+}
+.form_milestone_step_arrow.green {
+    border-color: transparent transparent transparent #60768d;
+}
+.form_milestone_step_arrow_li.green{
+	background: #60768d;
+}
+.form_milestone_step_arrow_li.blue {
+    background-color: #395877;
+}
+.form_milestone_step.blue{
+	background: #395877;
+}
+.form_milestone_step .floater.blue{
+	background: #395877;
+}
+.form_milestone_step_arrow.blue{
+    border-color: transparent transparent transparent #395877;
+}
+div.form_milestone_holder_wrap_outer{
+	border-radius: 8px;
+}
+.form_milestone_step.first{
+	border-radius: 8px 0 0 8px;
+}
+.form_milestone_step.last{
+	border-radius: 0 8px 8px 0;
+}
+div.form_milestone_holder_wrap_outer{
+	height: 45px;
+}
+.form_milestone_view{
+	height: 45px;
+}
+.form_milestone_step{
+	height: 45px;
+}
+.form_milestone_step_arrow_li{
+	height: 45px;
+}
+.form_milestone_step_arrow_wrap{
+	height: 45px;
+}
+.form_milestone_step_arrow{
+	top: -10px;
+}
+.form_milestone_step_arrow.white{
+	top: -12px;
+}

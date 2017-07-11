@@ -44,6 +44,10 @@
             float: right;
         }
 
+        .mar_right50{
+            margin-right: 50px;
+        }
+
 
     </style>
 </head>
@@ -51,81 +55,120 @@
 <div class="page-content form">
     <!--导航-->
     <div class="nav">
-        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;转专业计划配置
+        <a href="javascript:;" data-id="0" class="nav_menu"><i class="icon-home"></i>&nbsp;&nbsp;首页&nbsp;</a>-&nbsp;院系录取结果提交
     </div>
     <!--提示区域-->
     <div class="tip pl-10 pt-10 pb-10">
-        转专业计划配置。<br/>
+        院系录取结果提交。<br/>
         更多注意事项与使用帮助请查看<a href="javascript:;" onclick="alert('弹窗，打开查看本页帮助');">【打开本页帮助】</a>。
     </div>
     <!--表单区域-->
     <div class="form form-850">
-        <div class="big-title mt-15 mb-15 tl-c">教务处配置各院系转专业计划</div>
+        <div class="big-title mt-15 mb-15 tl-c">院系录取结果</div>
     </div>
     <!--列表显示区域-->
 
     <table id="test" class="list-table mt-20">
         <thead>
         <tr>
-            <td colspan="6">
+            <td colspan="11">
                 <div class="conditions pt-5 pb-5" id="filter">
-                    <div class="cds-area fr">
+                    <div class="cds-area fr ">
                         <div class="cds-act fr cds-act-1">
-                            <button class="search">查询&nbsp;<i class="icon-search"></i></button>&nbsp;
-                            <button id="addBtn" onclick="add()" class="search">添加&nbsp;<i class="icon-download-alt"></i></button>&nbsp;
+                            <button class="search mar_right50">查询<i class="icon-search"></i></button>
                         </div>
-
                     </div>
                 </div>
             </td>
         </tr>
         <th>序号</th>
+        <th>姓名</th>
+        <th>学号</th>
         <th>转专业类型</th>
-        <th>年级</th>
-        <th>配置开始时间</th>
-        <th>配置结束时间</th>
+        <th>原院系</th>
+        <th>原专业</th>
+        <th>笔试成绩</th>
         <th>操作</th>
-
+        </tr>
         </thead>
         <tbody>
         <!--第一行数据-->
         <tr>
             <td class="tl-c">1</td>
             <td class="tl-c">
-                <div class="show">启明学院</div>
+                <div class="show">李明</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017级</div>
+                <div class="show">200120312</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017/7/11</div>
-                <input type="text" class="edit hiden"/></td>
-            <td class="tl-c">
-                <div class="show">2017/7/17</div>
+                <div class="show">普通转专业</div>
             </td>
             <td class="tl-c">
-                <button class="btn btn-info btn-xs" onclick="publish()">发布</button>
-                <button class="btn btn-info btn-xs" onclick="edit()">修改</button>
-                <button class="btn btn-danger btn-xs" onclick="deleteItem()">删除</button>
+                <div class="show">机械学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">xx大类</div>
+            </td>
+
+            <td class="tl-c">
+                <div class="show">88</div>
+            </td>
+            <td class="tl-c">
+                <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
+
             </td>
         </tr>
         <!--第二行数据-->
         <tr>
             <td class="tl-c">2</td>
             <td class="tl-c">
-                <div class="show">学科大类转专业</div>
+                <div class="show">李明</div>
             </td>
             <td class="tl-c">
-                <div class="show">2016级</div>
+                <div class="show">200120312</div>
             </td>
             <td class="tl-c">
-                <div class="show">2017/7/14</div>
-                <input type="text" class="edit hiden"/></td>
-            <td class="tl-c">
-                <div class="show">2017/7/20</div>
+                <div class="show">普通转专业</div>
             </td>
             <td class="tl-c">
-                <div class="show">已发布</div>
+                <div class="show">机械学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">xx大类</div>
+            </td>
+
+            <td class="tl-c">
+                <div class="show">80</div>
+            </td>
+            <td class="tl-c">
+                <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
+            </td>
+        </tr>
+        <!--第三行数据-->
+        <tr>
+            <td class="tl-c">3</td>
+            <td class="tl-c">
+                <div class="show">王阳明</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">200120442</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">普通转专业</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">机械学院</div>
+            </td>
+            <td class="tl-c">
+                <div class="show">xx大类</div>
+            </td>
+
+            <td class="tl-c">
+                <div class="show">78</div>
+            </td>
+            <td class="tl-c">
+                <button class="btn btn-info btn-xs" onclick="detail()">查看详情</button>
             </td>
         </tr>
         </tbody>
@@ -147,22 +190,19 @@
             条
         </div>
     </div>
-
 </div>
 </body>
 <script>
 
-    function edit() {
-        alertIframe('departPlanForm.html', {width: "900px",height:"550px"});
+    function access() {
+        alert("通过");
     }
-    function add() {
-        alertIframe('departPlanForm.html', {width: "900px",height:"550px"});
+    function oppose() {
+        alert("填写驳回理由");
     }
-    function deleteItem() {
-        alert("是否确认删除?");
+    function detail() {
+        alertIframe('stuApplyForm.html', {width: "900px"});
     }
-    function publish() {
-        alert("该配置计划将自动发送给各院系，且不能再对该条数据进行修改");
-    }
+
 </script>
 </html>
